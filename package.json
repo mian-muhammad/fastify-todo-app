@@ -1,0 +1,21 @@
+{
+  "name": "fastify-todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "fastify start -l info --options app.js",
+    "dev": "fastify start -l info --options app.js --watch --pretty-logs",
+    "mongo:start": "docker run --rm -d -p 27017:27017 --name mongo-todo mongo:4",
+    "mongo:stop": "docker stop mongo-todo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.25.2",
+    "fastify-cli": "^2.14.0",
+    "fastify-env": "^2.1.1",
+    "fastify-mongodb": "^4.1.1"
+  }
+}
