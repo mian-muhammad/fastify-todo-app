@@ -14,9 +14,11 @@ module.exports = async function application(app, opts) {
     url: app.config.MONGO_URL
   });
 
-  app.register(require('./routes/todos'));
-
-  app.get('/', async (request, reply) => {
-    return { message: 'Hello World!!' };
+  app.register(require('fastify-swagger'), {
+    exposeRoute: true,
+    routePrefix: '/docs',
+    swagger: { info: { title: true } }
   });
+
+  app.register(require('./routes/todos'));
 };

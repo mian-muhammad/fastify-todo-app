@@ -16,6 +16,7 @@
     "fastify": "^3.25.2",
     "fastify-cli": "^2.14.0",
     "fastify-env": "^2.1.1",
-    "fastify-mongodb": "^4.1.1"
+    "fastify-mongodb": "^4.1.1",
+    "fastify-swagger": "^4.13.0"
   }
 }
